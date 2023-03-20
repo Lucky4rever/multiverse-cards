@@ -1,0 +1,55 @@
+@font-face {
+  font-family: CarterOne;
+  src: url(./assets/fonts/CarterOne/CarterOne-Regular.ttf);
+}
+
+:root {
+  --background: linear-gradient(-30deg, rgb(3, 48, 6), #005018 30% 70%, #09481c);
+  --block-background: #FCE4EC;
+  --border-color: #D5A5A5;
+  --text-color: #7E7E7E;
+  --link-gradient: linear-gradient(-30deg, #ee6352, red, #d16e8d);
+}
+
+html, body {
+  overflow: overlay;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  
+  color: white;
+  font-family: 'CarterOne', sans-serif;
+}
+
+#root {
+  position: absolute;
+  width: 100%;
+  min-height: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background) no-repeat;
+}
+
+@keyframes SuperRare {
+  0% {
+    transform: translateX(40px);
+    background-image: radial-gradient(circle, #b20707, #c0070d, #ce0713, #dc061a, #eb0420, #f2212c, #f93138, #ff3f44, #ff5657, #fe6a6a, #fc7c7c, #f88d8d);
+  }
+  33% {
+    transform: translateX(0px);
+    background-image: radial-gradient(circle, #ff0029, #ff353e, #ff4f51, #ff6464, #fd7676, #f77473, #f07370, #ea716d, #de5b55, #d0453c, #c22c24, #b20707);
+  }
+  67% {
+    transform: translateX(-40px);
+    background-image: radial-gradient(circle, #f88d8d, #ee7875, #e2625d, #d54c45, #c7352c, #c72a23, #c61d1a, #c5070f, #d30615, #e2051c, #f00322, #ff0029);
+  }
+  100% {
+    transform: translateX(0px);
+    background-image: radial-gradient(circle, #b20707, #c0070d, #ce0713, #dc061a, #eb0420, #f2212c, #f93138, #ff3f44, #ff5657, #fe6a6a, #fc7c7c, #f88d8d);
+  }
+}
+.SuperRareCard {
+  animation: 3s ease-in 1s infinite reverse both running SuperRare;
+}

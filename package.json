@@ -1,0 +1,59 @@
+{
+  "name": "multiverse-cards",
+  "version": "0.1.0",
+  "homepage": "https://lucky4rever.github.io/",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.12",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "framer-motion": "^10.6.1",
+    "neo4j-driver": "^5.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "5.0.1",
+    "register-service-worker": "^1.7.2",
+    "styled-components": "^5.3.6",
+    "typescript": "^4.9.5",
+    "typescript-require": "^0.3.0",
+    "use-neo4j": "^0.3.13",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "gh-pages-create": "bash ./gh-pages-creator.sh",
+    "fast-deploy": "npm run build && npm run gh-pages-create && npm run deploy"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/styled-components": "^5.1.26",
+    "gh-pages": "^5.0.0"
+  }
+}

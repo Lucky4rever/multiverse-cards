@@ -1,0 +1,32 @@
+[
+    {
+        "series": "The Legend of Zelda: Tears of Kingdom",
+        "background": "https://cdn.discordapp.com/attachments/798288758830530573/1087313979459776612/zelda-background.jpg",
+        "cards": [
+            {
+                "id": 1,
+                "name": "Link",
+                "rarity": "legendary",
+                "foreground": "https://cdn.discordapp.com/attachments/798288758830530573/1087313979250049034/LinkTears-of-Kingdom.jpeg"
+            },
+            {
+                "id": 2,
+                "name": "Boss Bokoblin",
+                "rarity": "rare",
+                "foreground": "https://cdn.wikimg.net/en/zeldawiki/images/2/2a/TotK_Bokoblin_Artwork.png"
+            }
+        ]
+    },
+    {
+        "series": "The Legend of Zelda: Breath Of The Wild",
+        "background": "https://cdn.discordapp.com/attachments/798288758830530573/1087313979459776612/zelda-background.jpg",
+        "cards": [
+            {
+                "id": 3,
+                "name": "Bokoblin",
+                "rarity": "common",
+                "foreground": "https://www.zeldadungeon.net/wiki/images/thumb/8/80/BotW_Bokoblin.png/400px-BotW_Bokoblin.png"
+            }
+        ]
+    }
+]
