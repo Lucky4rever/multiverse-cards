@@ -1,18 +1,20 @@
 import './index.css';
 import { Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
-import { StrictMode } from 'react';
+import { Fragment } from 'react';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <StrictMode>
+    <Fragment>
       <Routes>
         {AppRoutes.map((route, index) => {
           const { element, ...rest } = route;
           return <Route key={index} {...rest} element={element} />;
         })}
       </Routes>
-    </StrictMode>
+      <Footer />
+    </Fragment>
   );
 }
 

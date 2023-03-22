@@ -1,7 +1,7 @@
 {
   "name": "multiverse-cards",
   "version": "0.1.0",
-  "homepage": "https://lucky4rever.github.io/",
+  "homepage": "https://lucky4rever.github.io/multiverse-cards/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
-    "gh-pages-create": "bash ./gh-pages-creator.sh",
+    "gh-pages-create": "",
     "fast-deploy": "npm run build && npm run gh-pages-create && npm run deploy"
   },
   "eslintConfig": {

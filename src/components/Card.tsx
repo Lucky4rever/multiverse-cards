@@ -140,7 +140,11 @@ export default function Card (props: CardProps) {
     }
   
     return (
-        <CardDrager drag>
+        <CardDrager 
+            drag
+            whileTap={{ zIndex: 10, cursor: "grabbing" }}
+            whileDrag={{ boxShadow: "0px 5px 8px #222" }}
+        >
             <CardLayout style={{
                     backgroundImage: ColorByRarity[props.card.rarity],
                     transition: "1s",
@@ -148,8 +152,6 @@ export default function Card (props: CardProps) {
                 }} 
                 onTap={ ShowCard }
                 onDragStart={ () => setIsShow(true) }
-                whileTap={{ zIndex: 10, cursor: "grabbing" }}
-                whileDrag={{ boxShadow: "0px 5px 8px #222" }}
                 transition={{ duration: 0.6 }}
             >
                 <CardBackground src={props.background} alt={props.card.name}  />

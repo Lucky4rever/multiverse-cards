@@ -3,7 +3,7 @@ import Cards from "./components/Cards";
 const AppRoutes = [
   {
     path: '*',
-    element: <><Cards /></>
+    element: <Cards />
   }
 ];
 
