@@ -13,7 +13,6 @@ export default function Cards() {
 
     const getCardsBySeries = () => {
         let Cards = cardList.map(cards => {
-            console.log(cards["foreground-color"])
             return cards.cards.map(card => {
                 return {
                     series: cards["series"],

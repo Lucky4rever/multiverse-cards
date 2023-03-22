@@ -1,5 +1,5 @@
-import { motion, useCycle } from 'framer-motion';
-import React, { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const CardLayout = styled(motion.div)`
