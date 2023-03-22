@@ -1,44 +1,56 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { motion, MotionValue, useCycle } from 'framer-motion';
+import { motion, useCycle } from 'framer-motion';
+import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
 
 const CardLayout = styled(motion.div)`
+    display: inline-flex;
     position: relative;
     width: 260px;
     min-width: 260px;
     height: 360px;
-    margin: 30px;
-    
-    transition: 1s;
     border-radius: 43px;
-    background-color: gold;
-    overflow: hidden;
-
-	transition: 0.7s transform ease;
+    
 	transform-style: preserve-3d;
 `;
 
+const CardDrager = styled(motion.div)`
+    position: relative;
+    width: 260px;
+    min-width: 260px;
+    height: 360px;
+    margin: 20px;
+    border-radius: 43px;
+    
+    background-color: transparent;
+`;
+
 const CardBackground = styled.img`
-    height: 100%;
-    object-fit: cover; 
     position: absolute;
-    left: -62%;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 360px;
+    border-radius: 43px;
 
     object-fit: cover;
-    transform: rotateY(180deg);
     backface-visibility: hidden;
 `;
 
 const CardForeground = styled.div`
     position: relative;
-    display: grid;
+    display: block;
     justify-content: center;
-    align-items: center;
     width: 250px;
     height: 350px;
     margin: 5px;
+    margin-bottom: 0px;
+
     overflow: hidden;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    color: #000000;
 `;
+
 
 const CardImage = styled.img`
     width: 250px;
@@ -55,9 +67,9 @@ const CardInfo = styled.div`
     position: relative;
     width: 250px;
     height: 100px;
+
+    transform: translateY(-12px);
     border-radius: 0 0 40px 40px;
-    background-color: #a1d698;
-    color: #209115;
 `;
 
 const Bluring = styled.hr`
@@ -70,7 +82,6 @@ const Bluring = styled.hr`
     margin: 0;
 
     filter: blur(10px);
-    background-color: #a1d698;
 `;
 
 const CardTitle = styled.span`
@@ -98,6 +109,8 @@ const CardCovered = styled.div`
 export interface CardProps {
     series: string;
     background: string;
+    foregroundColor: string;
+    textColor: string;
     card: SingleCardProps;
 }
 
@@ -114,43 +127,43 @@ const ColorByRarity: any = {
     "legendary": "linear-gradient(to left bottom, red, orange, yellow, green, blue, magenta, cyan)"
 }
 
-export default function Card(props: CardProps) {
-    let zIndex = 1;
-    const zIndexOnClick = () => { zIndex = 10; }
-    const zIndexOnTouchEnd = () => { zIndex = 1; }
+export default function Card (props: CardProps) {
+    
     // const [animate, cycle] = useCycle(
     //     { transform: "rotateY(180deg)" },
     //     { transform: "rotateY(0deg)" }
     // )
+    
+    const [isShowed, setIsShow] = useState(false);
+    const ShowCard = () => {
+        setIsShow(true);
+    }
+  
     return (
-        <CardLayout key={props.card.id} 
-            style={{ 
-                backgroundImage: ColorByRarity[props.card.rarity]
-            }}
-            drag
-            whileHover={{ opacity: 1 }}
-            whileTap={{
-                opacity: 1,
-                boxShadow: "0px 5px 8px #222",
-                zIndex: zIndex
-            }}
-            onTapStart = { zIndexOnClick }
-            onTapCancel = { zIndexOnTouchEnd }
-            transition={{ duration: 2 }}
-            // animate={animate}
-            // onTap={cycle}
-        >
-            <CardBackground src={props.background} />
-            <CardForeground>
-                <CardImage src={props.card.foreground} />
-                <Bluring />
-                <CardInfo>
-                    <CardTitle>{props.card.name}</CardTitle>
-                    <CardDescription>Series: <b>{props.series}</b></CardDescription>
-                    <CardDescription>Rarity: <b>{props.card.rarity}</b></CardDescription>
-                </CardInfo>
-            </CardForeground>
-            <CardCovered />
-        </CardLayout>
-    )
-};
+        <CardDrager drag>
+            <CardLayout style={{
+                    backgroundImage: ColorByRarity[props.card.rarity],
+                    transition: "1s",
+                    transform: isShowed ? "rotateY(180deg)" : "rotateY(0deg)"
+                }} 
+                onTap={ ShowCard }
+                onDragStart={ () => setIsShow(true) }
+                whileTap={{ zIndex: 10, cursor: "grabbing" }}
+                whileDrag={{ boxShadow: "0px 5px 8px #222" }}
+                transition={{ duration: 0.6 }}
+            >
+                <CardBackground src={props.background} alt={props.card.name}  />
+                <CardForeground>
+                    <CardImage src={props.card.foreground} />
+                    <Bluring style={{backgroundColor: props.foregroundColor }} />
+                    <CardInfo style={{backgroundColor: props.foregroundColor, color: props.textColor }} >
+                        <CardTitle>{props.card.name}</CardTitle>
+                        <CardDescription>Series: <b>{props.series}</b></CardDescription>
+                        <CardDescription>Rarity: <b>{props.card.rarity}</b></CardDescription>
+                    </CardInfo>
+                </CardForeground>
+                <CardCovered />
+            </CardLayout>
+        </CardDrager>
+    );
+}

@@ -1,9 +1,11 @@
 import Card, { CardProps, SingleCardProps } from "./Card";
 
 interface CardsProps {
-    series: string;
-    background: string;
-    cards: SingleCardProps[];
+    "series": string;
+    "background": string;
+    "foreground-color": string;
+    "text-color": string;
+    "cards": SingleCardProps[];
 }
 
 export default function Cards() {
@@ -11,15 +13,18 @@ export default function Cards() {
 
     const getCardsBySeries = () => {
         let Cards = cardList.map(cards => {
+            console.log(cards["foreground-color"])
             return cards.cards.map(card => {
                 return {
-                    series: cards.series,
-                    background: cards.background,
+                    series: cards["series"],
+                    background: cards["background"],
+                    foregroundColor: cards["foreground-color"],
+                    textColor: cards["text-color"],
                     card: card
                 } as CardProps;
             });
         });
-        console.log(Cards)
+        // console.log(Cards)
 
         let AllCards: CardProps[] = [];
         for (let i = 0; i < Cards.length; i++)
@@ -31,12 +36,13 @@ export default function Cards() {
 
     return (
       <>
-        {console.log(sampledCardList)}
         {sampledCardList?.map(card => {
           return <Card 
               key={card.card.id}
-              series={card.series} 
-              background={card.background} 
+              series={card.series}
+              foregroundColor={card.foregroundColor}
+              textColor={card.textColor}
+              background={card.background}
               card={card.card} />
         })}
       </>

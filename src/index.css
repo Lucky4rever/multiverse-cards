@@ -22,13 +22,17 @@ html, body {
 }
 
 #root {
+  top: 0px;
   position: absolute;
   width: 100%;
   min-height: 500px;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+
+  overflow-x: hidden;
   background: var(--background) no-repeat;
 }
 
@@ -50,6 +54,28 @@ html, body {
     background-image: radial-gradient(circle, #b20707, #c0070d, #ce0713, #dc061a, #eb0420, #f2212c, #f93138, #ff3f44, #ff5657, #fe6a6a, #fc7c7c, #f88d8d);
   }
 }
+
+@keyframes OpenCard {
+  0% {
+    filter: blur(0px);
+  }
+  25% {
+    filter: blur(1px);
+  }
+  50% {
+    filter: blur(10px);
+  }
+  80% {
+    filter: blur(100px);
+  }
+  90% {
+    filter: blur(1000px);
+  }
+  90% {
+    display: none;
+  }
+}
+
 .SuperRareCard {
   animation: 3s ease-in 1s infinite reverse both running SuperRare;
 }

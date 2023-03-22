@@ -1,7 +1,9 @@
 [
     {
         "series": "The Legend of Zelda: Tears of Kingdom",
-        "background": "https://cdn.discordapp.com/attachments/798288758830530573/1087313979459776612/zelda-background.jpg",
+        "background": "https://wallpapercave.com/wp/wp11491978.jpg",
+        "foreground-color": "#A1D698",
+        "text-color": "#209115",
         "cards": [
             {
                 "id": 1,
@@ -19,13 +21,29 @@
     },
     {
         "series": "The Legend of Zelda: Breath Of The Wild",
-        "background": "https://cdn.discordapp.com/attachments/798288758830530573/1087313979459776612/zelda-background.jpg",
+        "background": "https://cdn.wallpapersafari.com/39/24/MzifVC.png",
+        "foreground-color": "#A1D698",
+        "text-color": "#209115",
         "cards": [
             {
                 "id": 3,
                 "name": "Bokoblin",
                 "rarity": "common",
                 "foreground": "https://www.zeldadungeon.net/wiki/images/thumb/8/80/BotW_Bokoblin.png/400px-BotW_Bokoblin.png"
+            }
+        ]
+    },
+    {
+        "series": "Kirbi",
+        "background": "https://cdn.suruga-ya.jp/database/pics_light/game/604041924.jpg",
+        "foreground-color": "#f88bc5",
+        "text-color": "#c64881",
+        "cards": [
+            {
+                "id": 3,
+                "name": "Kirbi",
+                "rarity": "legendary",
+                "foreground": "https://assets-prd.ignimgs.com/2023/02/24/kirby-thumb-1677264377700.jpg"
             }
         ]
     }
