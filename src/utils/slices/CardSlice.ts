@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import RandomCard from "../RandomCard";
-import _ from "lodash";
+import { union, filter } from "lodash";
 
 const CardSlice = createSlice({
   name: "cards",
@@ -9,10 +9,10 @@ const CardSlice = createSlice({
   },
   reducers: {
     addNewCard: (state) => {
-      state.cardList = _.union(state.cardList, [RandomCard()]);
+      state.cardList = union(state.cardList, [RandomCard()]);
     },
     removeCard: (state, action) => {
-      state.cardList = state.cardList.filter(card => card.id !== action.payload);
+      state.cardList = filter(state.cardList, (card) => (card.id !== action.payload));
     },
     removeAllCards: (state) => {
       state.cardList = [];
