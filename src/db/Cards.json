@@ -2,49 +2,109 @@
     {
         "series": "The Legend of Zelda: Tears of Kingdom",
         "background": "https://wallpapercave.com/wp/wp11491978.jpg",
-        "foreground-color": "#A1D698",
-        "text-color": "#209115",
-        "cards": [
-            {
-                "id": 1,
-                "name": "Link",
-                "rarity": "legendary",
-                "foreground": "https://cdn.discordapp.com/attachments/798288758830530573/1087313979250049034/LinkTears-of-Kingdom.jpeg"
-            },
-            {
-                "id": 2,
-                "name": "Boss Bokoblin",
-                "rarity": "rare",
-                "foreground": "https://cdn.wikimg.net/en/zeldawiki/images/2/2a/TotK_Bokoblin_Artwork.png"
-            }
-        ]
+        "foreground-color": "#D2D2D2",
+        "text-color": "#A18860",
+        "name": "Link",
+        "rarity": "legendary",
+        "foreground": "https://cdn.wikimg.net/en/zeldawiki/images/thumb/1/15/TotK_Link_Artwork.png/480px-TotK_Link_Artwork.png"
+    },
+    {
+        "series": "The Legend of Zelda: Tears of Kingdom",
+        "background": "https://wallpapercave.com/wp/wp11491978.jpg",
+        "foreground-color": "#D2D2D2",
+        "text-color": "#A18860",
+        "name": "Boss Bokoblin",
+        "rarity": "rare",
+        "foreground": "https://cdn.wikimg.net/en/zeldawiki/images/2/2a/TotK_Bokoblin_Artwork.png"
     },
     {
         "series": "The Legend of Zelda: Breath Of The Wild",
         "background": "https://cdn.wallpapersafari.com/39/24/MzifVC.png",
         "foreground-color": "#A1D698",
         "text-color": "#209115",
-        "cards": [
-            {
-                "id": 3,
-                "name": "Bokoblin",
-                "rarity": "common",
-                "foreground": "https://www.zeldadungeon.net/wiki/images/thumb/8/80/BotW_Bokoblin.png/400px-BotW_Bokoblin.png"
-            }
-        ]
+        "name": "Mipha",
+        "rarity": "legendary",
+        "foreground": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/f/f0/BotW_Mipha_Artwork.png"
+    },
+    {
+        "series": "The Legend of Zelda: Breath Of The Wild",
+        "background": "https://cdn.wallpapersafari.com/39/24/MzifVC.png",
+        "foreground-color": "#A1D698",
+        "text-color": "#209115",
+        "name": "Bokoblin",
+        "rarity": "common",
+        "foreground": "https://www.zeldadungeon.net/wiki/images/thumb/8/80/BotW_Bokoblin.png/400px-BotW_Bokoblin.png"
+    },
+    {
+        "series": "The Legend of Zelda: Breath Of The Wild",
+        "background": "https://cdn.wallpapersafari.com/39/24/MzifVC.png",
+        "foreground-color": "#A1D698",
+        "text-color": "#209115",
+        "name": "Lizardos",
+        "rarity": "common",
+        "foreground": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/9/98/BotW_Lizalfos_Render.png"
+    },
+    {
+        "series": "The Legend of Zelda: Breath Of The Wild",
+        "background": "https://cdn.wallpapersafari.com/39/24/MzifVC.png",
+        "foreground-color": "#A1D698",
+        "text-color": "#209115",
+        "name": "Lynel",
+        "rarity": "rare",
+        "foreground": "https://i.imgur.com/OSjvarq.png"
     },
     {
         "series": "Kirbi",
         "background": "https://cdn.suruga-ya.jp/database/pics_light/game/604041924.jpg",
         "foreground-color": "#f88bc5",
         "text-color": "#c64881",
-        "cards": [
-            {
-                "id": 3,
-                "name": "Kirbi",
-                "rarity": "legendary",
-                "foreground": "https://assets-prd.ignimgs.com/2023/02/24/kirby-thumb-1677264377700.jpg"
-            }
-        ]
+        "name": "Kirbi",
+        "rarity": "legendary",
+        "foreground": "https://assets-prd.ignimgs.com/2023/02/24/kirby-thumb-1677264377700.jpg"
+    },
+    {
+        "series": "Kirbi",
+        "background": "https://cdn.suruga-ya.jp/database/pics_light/game/604041924.jpg",
+        "foreground-color": "#f88bc5",
+        "text-color": "#c64881",
+        "name": "Car Kirbi",
+        "rarity": "rare",
+        "foreground": "https://img2.cgtrader.com/items/3696071/ae94d54b03/large/kirby-car-3d-model-fbx-stl-blend.jpg"
+    },
+    {
+        "series": "Kirbi",
+        "background": "https://cdn.suruga-ya.jp/database/pics_light/game/604041924.jpg",
+        "foreground-color": "#f88bc5",
+        "text-color": "#c64881",
+        "name": "Cone Kirby",
+        "rarity": "common",
+        "foreground": "https://3dissexy.com/wp-content/uploads/2022/11/il_1140xN.3728984264_qiez.webp"
+    },
+    {
+        "series": "Kirbi",
+        "background": "https://cdn.suruga-ya.jp/database/pics_light/game/604041924.jpg",
+        "foreground-color": "#f88bc5",
+        "text-color": "#c64881",
+        "name": "Vending Machine Kirbi",
+        "rarity": "common",
+        "foreground": "https://3dissexy.com/wp-content/uploads/2022/11/il_1140xN.3728984256_g48e.webp"
+    },
+    {
+        "series": "Kirbi",
+        "background": "https://cdn.suruga-ya.jp/database/pics_light/game/604041924.jpg",
+        "foreground-color": "#f88bc5",
+        "text-color": "#c64881",
+        "name": "Lightbulb Kirbi",
+        "rarity": "common",
+        "foreground": "https://3dissexy.com/wp-content/uploads/2022/11/il_1140xN.3776570367_p5k3.webp"
+    },
+    {
+        "series": "Kirbi",
+        "background": "https://cdn.suruga-ya.jp/database/pics_light/game/604041924.jpg",
+        "foreground-color": "#f88bc5",
+        "text-color": "#c64881",
+        "name": "Realy Fat Kirbi",
+        "rarity": "legendary",
+        "foreground": "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:600/h:338/q:75/https://bleedingcool.com/wp-content/uploads/2022/07/Kirbys-Dream-Buffet-MainArt.jpg"
     }
 ]

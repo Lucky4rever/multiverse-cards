@@ -1,49 +1,29 @@
-import Card, { CardProps, SingleCardProps } from "./Card";
+import Card from "./Card";
+import { useCardsSelector } from "../utils/hooks";
+import styled from "styled-components";
 
-interface CardsProps {
-    "series": string;
-    "background": string;
-    "foreground-color": string;
-    "text-color": string;
-    "cards": SingleCardProps[];
+const CardsLayout = styled.div`
+  position: relative;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  height: 360px;
+  width: 260px;
+
+  @media (max-width: 768px) {
+    width: 125px;
+    height: 175px;
+  }
+`;
+
+const Cards = () => {
+  const cardList = useCardsSelector((state) => state.cards.cardList);
+  return (
+    <CardsLayout>
+      {cardList?.map((card) => (<Card key={card.id} {...card} />))}
+    </CardsLayout>
+  );
 }
 
-export default function Cards() {
-    let cardList: CardsProps[] = require('../db/Cards.json');
-
-    const getCardsBySeries = () => {
-        let Cards = cardList.map(cards => {
-            return cards.cards.map(card => {
-                return {
-                    series: cards["series"],
-                    background: cards["background"],
-                    foregroundColor: cards["foreground-color"],
-                    textColor: cards["text-color"],
-                    card: card
-                } as CardProps;
-            });
-        });
-        // console.log(Cards)
-
-        let AllCards: CardProps[] = [];
-        for (let i = 0; i < Cards.length; i++)
-            for (let j = 0; j < Cards[i].length; j++)
-                AllCards.push(Cards[i][j]);
-        return AllCards;
-    }
-    const sampledCardList = getCardsBySeries();
-
-    return (
-      <>
-        {sampledCardList?.map(card => {
-          return <Card 
-              key={card.card.id}
-              series={card.series}
-              foregroundColor={card.foregroundColor}
-              textColor={card.textColor}
-              background={card.background}
-              card={card.card} />
-        })}
-      </>
-    );
-}
+export default Cards;
