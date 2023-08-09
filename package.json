@@ -1,7 +1,6 @@
 {
   "name": "multiverse-cards",
   "version": "1.0.0",
-  "homepage": "https://lucky4rever.github.io/multiverse-cards/",
   "private": false,
   "scripts": {
     "start": "react-scripts start",
@@ -56,7 +55,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "Create and delete random maps across different game universes",
+  "description": "Relax and get some random cards across different game universes",
   "main": "index.js",
   "repository": "https://github.com/Lucky4rever/multiverse-cards.git",
   "author": "Lucky4rever <snigur.pavlo@lll.kpi.ua>",
